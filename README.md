@@ -7,23 +7,23 @@ Uses omxplayer and pngview on Raspberry Pi.
   `sudo npm install -g npm`
 * Make sure you have `omxplayer`, `pngview`, and ImageMagick's `convert`
   installed somewhere on your PATH.
-** See other RPITV repositories at github for patched versions of `omxplayer`
-   and `pngview`.
+    * See other RPITV repositories at github for patched versions of `omxplayer`
+      and `pngview`.
 * From this directory, `sudo npm link` (someday... `sudo npm install rpitv-player`?)
 * Install `rpitv-disable-tty1`: `sudo install -m 755 rpitv-disable-tty1 /usr/local/bin`
-** this is used to disable the cursor and clear the terminal before videos are shown
-** make sure that the user account that `rpitv-player` will run under has permission
-   to run this via `sudo` with no password
+    * this is used to disable the cursor and clear the terminal before videos are shown
+    * make sure that the user account that `rpitv-player` will run under has permission
+      to run this via `sudo` with no password - on Raspbian this works by default for 
+      the `pi` user.
 * Create a couple directories:
-** `sudo mkdir /etc/rpitv-player /var/cache/rpitv-player`
-** `sudo chown yourUser:yourGroup /etc/rpitv-player /var/cache/rpitv-player`
+    * `sudo mkdir /etc/rpitv-player /var/cache/rpitv-player`
+    * `sudo chown yourUser:yourGroup /etc/rpitv-player /var/cache/rpitv-player`
 * Install systemd service:
-** `sudo cp rpitv-player.service /etc/systemd/system`
-** `sudo systemctl daemon-reload`
-** `sudo systemctl enable rpitv-player.service`
+    * `sudo cp rpitv-player.service /etc/systemd/system`
+    * `sudo systemctl daemon-reload`
+    * `sudo systemctl enable rpitv-player.service`
 * Create some JSON files in /etc/rpitv-player before proceeding further (see below)
-* Start service:
-** `sudo service rpitv-player start`
+* Start service: `sudo service rpitv-player start`
 
 ## Playlist/Configuration
 The rpitv-player script looks for .json files in `/etc/rpitv-player`. There are 
