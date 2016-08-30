@@ -60,7 +60,7 @@ this is overridden in `config.json`.
 ```
 
 where `globalTitles` is appended to each video's `titleList`, and `titleDuration` is the
-time for which each title is shown before proceeding to the next.
+time for which each title is shown before proceeding to the next (in milliseconds).
 
 When creating or removing JSON files, follow up with a `sudo service rpitv-player restart`.
 The script caches the list of files so it's necessary to do this before changes will be seen.
