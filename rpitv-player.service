@@ -1,0 +1,13 @@
+[Unit]
+Description=rpitv-player video rotation script
+After=network.target
+Requires=network.target
+
+[Service]
+User=pi
+ExecStart=/usr/bin/rpitv-player
+Type=simple
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

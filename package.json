@@ -1,0 +1,19 @@
+{
+  "name": "rpitv-player",
+  "version": "1.0.0",
+  "description": "video player",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Armenia",
+  "license": "MIT",
+  "bin": {
+    "rpitv-player" : "./rpitv-player.js",
+    "rpitv-player-video" : "./rpitv-player-video.js"
+  },
+  "dependencies": {
+    "async": "^2.0.1",
+    "glob": "^7.0.6"
+  }
+}

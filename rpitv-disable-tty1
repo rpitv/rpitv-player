@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# this works because pi can sudo without password
+if [ "root" != "$USER" ]; then
+	exec sudo $0 "$@"
+fi
+
+# setting foreground to black hides many sins :)
+setterm -term linux -foreground black -clear all > /dev/tty1
+
+
